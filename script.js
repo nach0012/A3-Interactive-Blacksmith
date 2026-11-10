@@ -4,6 +4,7 @@
 //   If it's fine, call heatForge() and empty the box.
 // Make sword: call makeSword(). It already shows the message.
 // Reset: call resetForge(). It sets heat 20, swords 0, and clears the box and message.
+
 // Select the page elements
 const forgeBox = document.querySelector('#forge');
 const forgeImage = document.querySelector('#forge-image');
@@ -22,7 +23,7 @@ const resetButton = document.querySelector('#reset-button');
 let forgeHeat = 20;
 let swordsMade = 0;
 
-// Choose the status that matches a heat value
+//  the status that matches a heat value
 function getForgeStatus(heatValue) {
   if (heatValue < 30) {
     return 'Too cold';
@@ -33,7 +34,7 @@ function getForgeStatus(heatValue) {
   }
 }
 
-// Show the current state on the page
+// Update the current state on the page
 function updateForge() {
   heatText.textContent = forgeHeat;
   swordText.textContent = swordsMade;
@@ -84,7 +85,6 @@ function makeSword() {
 }
 
 // Return the forge to its starting state
-// (Changed for A3: clears the input box and leaves the message area empty.)
 function resetForge() {
   forgeHeat = 20;
   swordsMade = 0;
