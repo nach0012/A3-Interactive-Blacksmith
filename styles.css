@@ -1,0 +1,51 @@
+:root { color-scheme: light; font-family: Arial, Helvetica, sans-serif; color: #212721; background: #f3f6f4; }
+* { box-sizing: border-box; }
+body { margin: 0; line-height: 1.6; font-size: 1rem; }
+header { padding: 1rem max(1.25rem, calc((100vw - 1080px) / 2)); background: #006341; color: white; display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+header p { margin: 0; font-weight: bold; }
+main { max-width: 1120px; padding: 2.5rem 1.25rem; margin: auto; }
+h1 { font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1.1; letter-spacing: -.04em; margin: .25rem 0 1rem; }
+h2 { font-size: 1.4rem; line-height: 1.3; margin: 0 0 1rem; }
+h3 { font-size: 1rem; margin: 0 0 .5rem; }
+p { margin: 0 0 1rem; }
+.eyebrow { color: #006341; text-transform: uppercase; letter-spacing: .12em; font-weight: bold; font-size: .875rem; margin-bottom: .5rem; }
+.intro { margin-bottom: 2rem; }
+.layout { display: grid; grid-template-columns: 1.15fr 1fr; gap: 1.5rem; align-items: start; }
+.forge { --status-bg: #e4eaf1; --status-ink: #263b50; border: 2px solid #006341; background: white; border-radius: 1.25rem; overflow: hidden; }
+.forge-top { padding: 2rem; background: var(--status-bg); color: var(--status-ink); border-bottom: 1px solid #bdc9c2; }
+.forge-top .eyebrow { color: inherit; }
+.forge-top h2 { margin-bottom: 2rem; }
+.status { font-size: clamp(1.6rem, 4vw, 2.25rem); font-weight: bold; margin: 0; }
+.readings { display: grid; grid-template-columns: 1fr 1fr; padding: 2rem; gap: 1rem; }
+.readings p { font-size: 3rem; line-height: 1.2; font-weight: bold; margin: 0; }
+.unit { font-size: 1rem; font-weight: normal; }
+.message-box { margin: 0 2rem 2rem; padding-top: 1.5rem; border-top: 1px solid #bdc9c2; }
+.message-box p { margin: 0; min-height: 3.2em; }
+aside { display: grid; gap: 1.5rem; }
+.panel { padding: 1.5rem; background: white; border: 1px solid #bdc9c2; border-radius: 1rem; }
+dl { margin: 0; }
+dt { margin-top: 1rem; }
+dd { margin-left: 0; margin-top: .25rem; }
+code { background: #e9f2ec; color: #004b31; padding: .2rem .4rem; border-radius: .25rem; font-size: .95rem; overflow-wrap: anywhere; }
+.note { font-size: .875rem; margin: 1.25rem 0 0; color: #455449; }
+.rules { list-style: none; padding: 0; margin: 0; }
+.rules li { display: flex; gap: 1rem; padding: .5rem 0; }
+.rules strong { min-width: 4rem; }
+footer { margin-top: 2rem; font-size: .9rem; color: #455449; }
+.is-cold { --status-bg: #e4eaf1; --status-ink: #263b50; }
+.is-ready { --status-bg: #d8eee1; --status-ink: #004b31; }
+.is-roaring { --status-bg: #ffe3b5; --status-ink: #703400; }
+@media (max-width: 700px) { .layout { grid-template-columns: 1fr; } main { padding-top: 1.5rem; } .forge-top, .readings { padding: 1.5rem; } .message-box { margin-inline: 1.5rem; } }
+
+#forge-image { display: block; width: 100%; height: auto; max-height: 240px; object-fit: contain; margin: -1rem auto 1rem; }
+
+/*  forge controls */
+.heat-form label { display: block; font-weight: bold; margin-bottom: .4rem; }
+.heat-row, .button-row { display: flex; flex-wrap: wrap; gap: .75rem; }
+.button-row { margin-top: 1rem; }
+.heat-row input { flex: 1 1 8rem; min-width: 0; padding: .65rem .75rem; font: inherit; border: 2px solid #455449; border-radius: .5rem; }
+button { flex: 1 1 auto; padding: .7rem 1.1rem; font: inherit; font-weight: bold; color: white; background: #006341; border: 2px solid #006341; border-radius: .5rem; cursor: pointer; }
+button:hover { background: #004b31; border-color: #004b31; }
+button.secondary { color: #006341; background: white; }
+button.secondary:hover { background: #e9f2ec; }
+.heat-row input:focus-visible, button:focus-visible { outline: 3px solid #f2a900; outline-offset: 2px; }
